@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Hotpizza": {
+    "Api": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": false,

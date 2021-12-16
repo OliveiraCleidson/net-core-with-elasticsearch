@@ -1,4 +1,4 @@
-namespace Hotpizza;
+namespace Api;
 
 public class WeatherForecast
 {

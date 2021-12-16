@@ -1,4 +1,4 @@
-namespace Hotpizza.Entities;
+namespace Domain.Entities;
 
 public class Entity
 {
