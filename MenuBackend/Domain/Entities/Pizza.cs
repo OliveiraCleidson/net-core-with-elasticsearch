@@ -6,6 +6,8 @@ public class Pizza : Entity
     :base()
     {
         _ingredients = new List<Ingredient>();
+        _name = String.Empty;
+        _price = 15;
     }
 
     public Pizza(Guid id, DateTime updatedAt, DateTime createdAt, string name, ICollection<Ingredient> ingredients,
@@ -28,7 +30,7 @@ public class Pizza : Entity
     public ICollection<Ingredient> Ingredients
     {
         get => _ingredients;
-        set { _ingredients = value; UpdateAt = DateTime.UtcNow; }
+        private set { _ingredients = value; UpdateAt = DateTime.UtcNow; }
     }
 
     public decimal Price
@@ -39,5 +41,18 @@ public class Pizza : Entity
             _price = value;
             UpdateAt = DateTime.UtcNow;
         }
+    }
+
+    public void AddIngredient(Ingredient ingredient)
+    {
+        _ingredients.Add(ingredient);
+        UpdateAt = DateTime.UtcNow;
+    }
+    
+    public void AddIngredients(ICollection<Ingredient> ingredients)
+    {
+        foreach (var ingredient in ingredients) _ingredients.Add(ingredient);
+
+        UpdateAt = DateTime.UtcNow;
     }
 }

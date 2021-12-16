@@ -2,7 +2,7 @@ namespace Domain.Entities;
 
 public class Ingredient : Entity
 {
-    public Ingredient():base(){}
+    public Ingredient():base(){_name = String.Empty;}
 
     public Ingredient(string name) : base() => _name = name;
     public Ingredient(Guid id, DateTime updatedAt, DateTime createdAt, string name)
