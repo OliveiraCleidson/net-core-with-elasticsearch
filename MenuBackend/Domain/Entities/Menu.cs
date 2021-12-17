@@ -43,6 +43,7 @@ public class Menu : Entity
         _pizzas.Add(pizza);
         UpdateAt = DateTime.UtcNow;
     }
+    
 
     public void AddPizzas(ICollection<Pizza> pizzas)
     {
